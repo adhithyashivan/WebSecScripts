@@ -44,6 +44,15 @@ def run_all():
                         headers=HEADERS, proxies=PROXY)
     show_response(r)
 
+    print("➡ OPTIONS for all employees endpoint")
+    r = requests.options(f"{BASE_URL}/employees",
+                         headers=HEADERS, proxies=PROXY)
+    show_response(r)
+
+    print("➡ OPTIONS for create endpoint")
+    r = requests.options(f"{BASE_URL}/create", headers=HEADERS, proxies=PROXY)
+    show_response(r)
+
 
 if __name__ == "__main__":
     run_all()
